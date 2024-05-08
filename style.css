@@ -95,4 +95,17 @@ height: 65vh;
 transform: translate(5%, 0);
 border-radius: 5px;
 box-shadow: 0px 0px 16px rgba(0,0,0,0.2);
+padding-block: 3%;
+}
+
+.container > .head{
+width: 100%;
+height: auto;
+display: flex;
+flex-direction: row;
+justify-content: center;
+}
+
+.container > .head > span{
+font-weight: 600;
 }
