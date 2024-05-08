@@ -104,8 +104,34 @@ height: auto;
 display: flex;
 flex-direction: row;
 justify-content: center;
+margin-bottom: 20px;
 }
 
 .container > .head > span{
 font-weight: 600;
+}
+
+.option{
+width: 80%;
+height: 12%;
+margin-left: 10%;
+margin-block: 2%;
+border-radius: 60px;
+color: #0064B2;
+background: #DAEFFF;
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+align-items: center;
+padding-inline: 5%;
+box-sizing: border-box;
+}
+
+.option > *{
+margin-right: 20px;
+}
+
+.option:hover{
+color: #0064B2;
+background: #8FCEFF;
 }

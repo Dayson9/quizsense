@@ -22,9 +22,28 @@
 <h2>QuizSense</h2>
 <div class="container">
 <div class="head">
-<span>[Q.0 of 10]</span>
+<span>[Q.{{counter[0]}} of {{counter[1]}}]</span>
 </div>
-<span>{{question.value}}</span>
+<span style="color: #1F2457;">{{question.value}}</span>
+<div class="option" style="margin-top: 12%">
+<span>A</span>
+<span>{{option.a}}</span>
+</div>
+
+<div class="option">
+<span>B</span>
+<span>{{option.b}}</span>
+</div>
+
+<div class="option">
+<span>C</span>
+<span>{{option.c}}</span>
+</div>
+
+<div class="option">
+<span>D</span>
+<span>{{option.d}}</span>
+</div>
 </div>
 </div>  
   
