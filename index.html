@@ -22,27 +22,27 @@
 <h2>QuizSense</h2>
 <div class="container">
 <div class="head">
-<span>[Q.{{counter[0]}} of {{counter[1]}}]</span>
+<span>[Q.{{counter+1}} of {{qtemp.length}}]</span>
 </div>
-<span style="color: #1F2457;">{{question.value}}</span>
+<span style="color: #1F2457;">{{quiz.question}}</span>
 <div class="option" style="margin-top: 12%">
 <span>A</span>
-<span>{{option.a}}</span>
+<span>{{quiz.option[0]}}</span>
 </div>
 
 <div class="option">
 <span>B</span>
-<span>{{option.b}}</span>
+<span>{{quiz.option[1]}}</span>
 </div>
 
 <div class="option">
 <span>C</span>
-<span>{{option.c}}</span>
+<span>{{quiz.option[2]}}</span>
 </div>
 
 <div class="option">
 <span>D</span>
-<span>{{option.d}}</span>
+<span>{{quiz.option[3]}}</span>
 </div>
 </div>
 </div>  
@@ -51,17 +51,16 @@
 <div class="grid">
 <div>
 <span>Difficulty</span>
-<select>
-<option>Easy</option>
-<option>Medium</option>
+<select onchange="diff = this.value;">
+<option value="easy">Easy</option>
+<option value="medium">Medium</option>
+<option value="hard">Hard</option>
 </select>
 </div>
 
 <div>
-<span>Subject</span>
-<select>
-<option>Physics</option>
-<option>Maths</option>
+<span>Category</span>
+<select id="s2" onchange="cat = this.value;">
 </select>
 </div>
 </div>
@@ -71,6 +70,7 @@
 
 
 <script src="queflow.js"></script>
+<script src="vars.js"></script>
 <script src="main.js"></script>
 </body>
 </html>
