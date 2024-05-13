@@ -1,4 +1,8 @@
 const categories = {
+"geography" : "Geography",
+"biology" : "Biology",
+"physics" : "Physics",
+"mathematics" : "Mathematics",
 "music" : "Music",
 "sport_and_leisure" : "Sports & Leisure",
 "film_and_tv" : "Films & Tv",
@@ -6,10 +10,9 @@ const categories = {
 "history" : "History",
 "society_and_culture" : "Society & Culture",
 "science" : "Science",
-"geography" : "Geography",
 "food_and_drink" : "Food & Drink",
 "general_knowledge" : "General Knowledge"
 };
 
 const {iRender, Signal} = QueFlow;
-var content = "", diff = "easy", cat = "music", counter = 0, qtemp = [{question: "", options: ["", "", "", ""], correct: "" }, {}, {}, {}, {}, {}, {}, {}, {}, {}], quiz = Signal({question: qtemp[counter].question, option: [...qtemp[counter].options]}),   selected = [];
+var content = "", diff = "easy", cat = "music", counter = Signal(0), qtemp = [{question: "", options: ["", "", "", ""], correct: ""}, {}, {}, {}, {}, {}, {}, {}, {}, {}], question = Signal(""), option = Signal(["", "", "", ""]),   selected = [];
