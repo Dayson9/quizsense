@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
   <title>QuizSense | Take quizzes online</title>
  
+ <!-- Icons CDN !-->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    
- 
+     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+   
   <!-- Custom Styles -->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="desktop.css">
 </head>
 
 <body>
@@ -25,7 +26,7 @@
 <span>[Q.{{counter.value+1}} of {{qtemp.length}}]</span>
 </div>
 <span style="color: #1F2457;">{{question.value}}</span>
-<div class="option" style="margin-top: 12%">
+<div class="option" style="margin-top: 7%">
 <span>A</span>
 <span>{{option[0]}}</span>
 </div>
@@ -40,12 +41,20 @@
 <span>{{option[2]}}</span>
 </div>
 
-<div class="option">
+<div class="option" style="margin-bottom: 5%">
 <span>D</span>
 <span>{{option[3]}}</span>
 </div>
+<div class="controls">
+<button class="other" ontouchstart="openPref()"><i class="fa fa-cog"></i></button>
+<div>
+<button class="prev" ontouchstart="prevQuest()"><i class="fa fa-arrow-left"></i></button>
+<button class="other">Submit <i class="fa fa-check"></i></button>
+<button class="nxt" ontouchstart="nextQuest()"><i class="fa fa-arrow-right"></i></button>
 </div>
-</div>  
+</div>
+</div>
+</div>
   
 <div id="intro">
 <div class="grid">
@@ -64,10 +73,21 @@
 </select>
 </div>
 </div>
-<button onclick="startQuiz();">Start Quiz <i class="fa fa-arrow-right"></i></button>
+<button onclick="startQuiz()">Start Quiz <i class="fa fa-arrow-right"></i></button>
+</div>
+
+<div id="scored">
+<h3>Your Score</h3>
+<canvas id="percentage"></canvas>
+<h2>{{result.percentage}}</h2>
+<pre>You scored {{result.score}} out of {{qtemp.length}}</pre>
+<div>
+<button>Ok</button>
+<button class="nxt">Results <i class="fa fa-list"></i></button>
 </div>
 </div>
 
+</div>
 
 <script src="queflow.js"></script>
 <script src="vars.js"></script>

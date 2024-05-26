@@ -15,4 +15,4 @@ const categories = {
 };
 
 const {iRender, Signal} = QueFlow;
-var content = "", diff = "easy", cat = "music", counter = Signal(0), qtemp = [{question: "", options: ["", "", "", ""], correct: ""}, {}, {}, {}, {}, {}, {}, {}, {}, {}], question = Signal(""), option = Signal(["", "", "", ""]),   selected = [];
+var content = "", diff = "easy", cat = "music", counter = Signal(0), qtemp = [{question: "", options: ["", "", "", ""], correct: ""}, {}, {}, {}, {}, {}, {}, {}, {}, {}], question = Signal("How many continents do we have?"), option = Signal(["", "", "", ""]),   selected = [], result = Signal({score: 10, percentage: "100%"});
