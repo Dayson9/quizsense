@@ -1,96 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
   <title>QuizSense | Take quizzes online</title>
- 
- <!-- Icons CDN !-->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-   
+
+  <!-- Icons CDN !-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
   <!-- Custom Styles -->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="desktop.css">
 </head>
 
 <body>
-<div id="app">
-  
-<div id="game">
-<h2>QuizSense</h2>
-<div class="container">
-<div class="head">
-<span>[Q.{{counter.value+1}} of {{qtemp.length}}]</span>
-</div>
-<span style="color: #1F2457;">{{question.value}}</span>
-<div class="option" style="margin-top: 7%">
-<span>A</span>
-<span>{{option[0]}}</span>
-</div>
+  <div id="app">
 
-<div class="option">
-<span>B</span>
-<span>{{option[1]}}</span>
-</div>
+    <div id="game">
+      <h2>QuizSense</h2>
+      <div class="container">
+        <div class="head">
+          <span>[Q.{{counter.value+1}} of {{qtemp.length}}]</span>
+        </div>
+        <span style="color: #1F2457;">{{question.value}}</span>
+        <div class="option" style="margin-top: 7%">
+          <span>A</span>
+          <span>{{option[0]}}</span>
+        </div>
 
-<div class="option">
-<span>C</span>
-<span>{{option[2]}}</span>
-</div>
+        <div class="option">
+          <span>B</span>
+          <span>{{option[1]}}</span>
+        </div>
 
-<div class="option" style="margin-bottom: 5%">
-<span>D</span>
-<span>{{option[3]}}</span>
-</div>
-<div class="controls">
-<button class="other" ontouchstart="openPref()"><i class="fa fa-cog"></i></button>
-<div>
-<button class="prev" ontouchstart="prevQuest()"><i class="fa fa-arrow-left"></i></button>
-<button class="other">Submit <i class="fa fa-check"></i></button>
-<button class="nxt" ontouchstart="nextQuest()"><i class="fa fa-arrow-right"></i></button>
-</div>
-</div>
-</div>
-</div>
-  
-<div id="intro">
-<div class="grid">
-<div>
-<span>Difficulty</span>
-<select onchange="diff = this.value;">
-<option value="easy">Easy</option>
-<option value="medium">Medium</option>
-<option value="hard">Hard</option>
-</select>
-</div>
+        <div class="option">
+          <span>C</span>
+          <span>{{option[2]}}</span>
+        </div>
 
-<div>
-<span>Category</span>
-<select id="s2" onchange="cat = this.value;">
-</select>
-</div>
-</div>
-<button onclick="startQuiz()">Start Quiz <i class="fa fa-arrow-right"></i></button>
-</div>
+        <div class="option" style="margin-bottom: 5%">
+          <span>D</span>
+          <span>{{option[3]}}</span>
+        </div>
+        <div class="controls">
+          <button class="other" ontouchstart="openPref()"><i class="fa fa-cog"></i></button>
+          <div>
+            <button class="prev" ontouchstart="prevQuest()"><i class="fa fa-arrow-left"></i></button>
+            <button class="other">Submit <i class="fa fa-check"></i></button>
+            <button class="nxt" ontouchstart="nextQuest()"><i class="fa fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<div id="scored">
-<h3>Your Score</h3>
-<canvas id="percentage"></canvas>
-<h2>{{result.percentage}}</h2>
-<pre>You scored {{result.score}} out of {{qtemp.length}}</pre>
-<div>
-<button>Ok</button>
-<button class="nxt">Results <i class="fa fa-list"></i></button>
-</div>
-</div>
+    <div id="intro">
+      <div class="grid">
+        <div>
+          <span>Difficulty</span>
+          <select onchange="diff = this.value;">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
+        </div>
 
-</div>
+        <div>
+          <span>Category</span>
+          <select id="s2" onchange="cat = this.value;">
+          </select>
+        </div>
+      </div>
+      <button onclick="startQuiz()">Start Quiz <i class="fa fa-arrow-right"></i></button>
+    </div>
 
-<script src="queflow.js"></script>
-<script src="vars.js"></script>
-<script src="main.js"></script>
+    <div id="scored">
+      <h3>Your Score</h3>
+      <canvas id="percentage"></canvas>
+      <h2>{{result.percentage}}</h2>
+      <pre>You scored {{result.score}} out of {{qtemp.length}}</pre>
+      <div>
+        <button>Ok</button>
+        <button class="nxt">Results <i class="fa fa-list"></i></button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="queflow.js"></script>
+  <script src="vars.js"></script>
+  <script src="main.js"></script>
 </body>
+
 </html>

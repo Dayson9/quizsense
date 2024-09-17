@@ -1,8 +1,8 @@
-@media only screen and (min-width: 768px){
-.grid{
-width: 80%;
-margin-left: 10%;
-height: 20vh;
-}
+@media only screen and (min-width: 768px) {
+  .grid {
+    width: 80%;
+    margin-left: 10%;
+    height: 20vh;
+  }
 
 }
